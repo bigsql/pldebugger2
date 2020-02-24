@@ -1,13 +1,16 @@
 # plDebugger
-============
 
 This module is a set of shared libraries which implement an API for debugging
 functions & procedures on PostgreSQL 9.6 and above. The pgAdmin4 project
 (http://www.pgadmin.org/) provides a client user interface.
 
+## History
+This project was originally authored by Korry Douglas in 2004.  Denis Lussier sponsored 
+young Korry whilst he was the Founder/CTO of EnterpriseDB.  It is now included as part of
+BigSQL Postgres (http://bigsql.org).
 
-Installation
-------------
+
+## Building from source
 
 - Copy this directory to contrib/ in your PostgreSQL source tree.
 
@@ -37,17 +40,6 @@ another session (such as a backend servicing a web app) to execute the function
 and allow you to debug in-context.
 
 For further information, please see the pgAdmin documentation.
-
-
-Troubleshooting
----------------
-
-The majority of problems we've encountered with the plugin are caused by
-failing to add (or incorrectly adding) the debugger plugin library to the
-shared_preload_libraries configuration directive in postgresql.conf (following
-which, the server *must* be restarted). This will prevent global breakpoints
-working on all platforms, and on some (notably Windows) may prevent the 
-pldbgapi.sql script from executing correctly.
 
 
 Architecture
