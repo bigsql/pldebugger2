@@ -1,17 +1,13 @@
-# plDebugger
-
+# plDebugger2
 This module is a set of shared libraries which implement an API for debugging
-functions & procedures on PostgreSQL 9.6 and above. The pgAdmin4 project
-(http://www.pgadmin.org/) provides a client user interface.
+functions & procedures on PostgreSQL 9.4+. The pgAdmin4 project
+(http://www.pgadmin.org/) provides a lovely client user interface.
 
 ## History
-This project was originally authored by Korry Douglas in 2004.  Denis Lussier sponsored 
-young Korry whilst he was the Founder/CTO of EnterpriseDB.  It is now included as part of
-BigSQL Postgres (http://bigsql.org).
-
+This project was originally authored by Korry Douglas in 2004.  In 2005, as Founder/CTO of EnterpriseDB,
+Denis Lussier sponsored young Korry to Open Source this project for the benefit of the Postgres Community.
 
 ## Building from source
-
 - Copy this directory to contrib/ in your PostgreSQL source tree.
 
 - Run 'make; make install'
@@ -29,10 +25,8 @@ BigSQL Postgres (http://bigsql.org).
   CREATE EXTENSION pldbgapi;
 
 
-Usage
------
-
-Connect pgAdmin to the database containing the functions you wish to debug.
+##Usage
+Connect pgAdmin4 to the database containing the functions you wish to debug.
 Right-click the function to debug, and select Debugging->Debug to execute and
 debug the function immediately, or select Debugging->Set Global Breakpoint to
 set a breakpoint on the function. This will cause the debugger to wait for
@@ -75,8 +69,7 @@ debugger client  *------ libpq --------* Proxy backend
 application client *----- libpq -------* Target backend
 
 
-License
--------
+## License
 
 The pldebugger API is released under the Artistic License v2.0.
 
