@@ -25,7 +25,7 @@ Denis Lussier sponsored young Korry to Open Source this project for the benefit 
   CREATE EXTENSION pldbgapi;
 
 
-##Usage
+## Usage
 Connect pgAdmin4 to the database containing the functions you wish to debug.
 Right-click the function to debug, and select Debugging->Debug to execute and
 debug the function immediately, or select Debugging->Set Global Breakpoint to
@@ -35,10 +35,7 @@ and allow you to debug in-context.
 
 For further information, please see the pgAdmin documentation.
 
-
-Architecture
-------------
-
+## Architecture
 The debugger consists of three parts:
 
 1. The client. This is typically a GUI displays the source code, current
@@ -70,7 +67,6 @@ application client *----- libpq -------* Target backend
 
 
 ## License
-
 The pldebugger API is released under the Artistic License v2.0.
 
     https://opensource.org/licenses/artistic-license-2.0
